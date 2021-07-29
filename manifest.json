@@ -1,0 +1,48 @@
+{
+    "name": "hoosh!",
+    "version": "1.0.0",
+    "description": "make tabs disapear in a second",
+    "manifest_version": 2,
+
+    "permissions": [
+      "tabs",
+      "history",
+      "storage"
+    ],
+    "commands": {
+        "toggle-feature-foo": {
+          "suggested_key": {
+            "default": "Alt+Z"
+          },
+          "description": "Toggle feature foo",
+          "global": true
+        },
+        "toggle-feature-hoo": {
+          "suggested_key": {
+            "default": "Alt+X"
+          },
+          "description": "Toggle feature hoo",
+          "global": true
+        },
+        "clear-data": {
+          "suggested_key": {
+            "default": "Alt+C"
+          },
+          "description": "clears all browsing data",
+          "global": true
+        }
+      },
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "browser_action": {
+        "default_popup": "html/popup.html"
+        
+    },
+    "options_page": "html/options.html",
+    "content_scripts": [
+    {
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["js/foreground.js"]
+    }]
+  }

@@ -1,0 +1,21 @@
+body {
+    min-width: 305px; /* your desired width */
+    max-width: 100%;
+    position: relative;
+
+  }
+.reopen{
+  width: 100%;
+  padding: 1em;
+  border: 1px solid
+}
+.lnkup{
+  width: 100%;
+  padding: 1em;
+  border: 1px solid
+}
+.container{
+  width: 70%;
+  align-self: center;
+  padding-left: 3em;
+}
